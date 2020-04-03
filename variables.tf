@@ -134,7 +134,7 @@ EOF
 }
 
 variable "master_ipv4_cidr_block" {
-  type = string
+  type    = string
   default = "172.16.0.0/28"
 
   description = <<EOF
@@ -156,7 +156,7 @@ EOF
 }
 
 variable "http_load_balancing_disabled" {
-  type = string
+  type    = string
   default = "false"
 
   description = <<EOF
@@ -184,5 +184,26 @@ variable "master_authorized_networks_cidr_blocks" {
   description = <<EOF
 Defines up to 20 external networks that can access Kubernetes master
 through HTTPS.
+EOF
+}
+
+variable "private_endpoint" {
+  type    = string
+  default = "false"
+
+  description = <<EOF
+Whether the master's internal IP address is used as the cluster endpoint and the
+public endpoint is disabled.
+EOF
+}
+
+variable "private_nodes" {
+  type    = string
+  default = "true"
+
+  description = <<EOF
+Whether nodes have internal IP addresses only. If enabled, all nodes are given
+only RFC 1918 private addresses and communicate with the master via private
+networking.
 EOF
 }
