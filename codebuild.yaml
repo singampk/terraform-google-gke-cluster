@@ -22,4 +22,5 @@ steps:
         - |
         docker push gcr.io/fabled-autonomy-268009/codebuild:latest || exit 0
 
-images: gcr.io/fabled-autonomy-268009/codebuild:latest
+images: 
+    - gcr.io/fabled-autonomy-268009/codebuild:latest
