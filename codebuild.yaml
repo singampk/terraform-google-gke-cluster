@@ -13,7 +13,7 @@ steps:
             "gcr.io/fabled-autonomy-268009/codebuild:latest",
             "."
         ]
-
+  #push image
   - id: "Push image"
     name: "gcr.io/cloud-builders/docker"
     entrypoint: bash
@@ -21,3 +21,5 @@ steps:
         - -c
         - |
         docker push gcr.io/fabled-autonomy-268009/codebuild:latest || exit 0
+
+images: gcr.io/fabled-autonomy-268009/codebuild:latest
