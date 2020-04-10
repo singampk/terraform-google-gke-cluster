@@ -3,7 +3,7 @@
 steps:
   - id: "Docker builder"
     name: "gcr.io/cloud-builders/docker"  
-    arga:
+    args:
         [
             "build",
             "-f",
