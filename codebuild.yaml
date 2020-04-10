@@ -3,4 +3,3 @@
 steps:
   - id: "Docker builder"
     name: "gcr.io/cloud-builders/docker"  
-    args: ['build', '-t', 'gcr.io/fabled-autonomy-268009/codebuild:latest', '.']
