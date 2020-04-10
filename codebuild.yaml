@@ -3,3 +3,13 @@
 steps:
   - id: "Docker builder"
     name: "gcr.io/cloud-builders/docker"  
+    arga:
+        [
+            "build",
+            "-f",
+            "Dockerfile",
+            "--pull",
+            "-t",
+            "gcr.io/fabled-autonomy-268009/codebuild:latest",
+            "."
+        ]
