@@ -1,0 +1,7 @@
+# This build file is to build a Docker machine image to run the terraform code
+
+steps:
+  - id: "Docker builder"
+    name: "gcr.io/cloud-builders/docker"
+    
+
