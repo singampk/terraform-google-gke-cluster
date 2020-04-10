@@ -18,8 +18,8 @@ steps:
     name: "gcr.io/cloud-builders/docker"
     entrypoint: bash
     args:
-        - -c
-        - |
+      - -c
+      - |
         docker push gcr.io/fabled-autonomy-268009/codebuild:latest || exit 0
 
 images: 
