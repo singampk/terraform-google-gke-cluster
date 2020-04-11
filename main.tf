@@ -20,6 +20,9 @@
 
 terraform {
   required_version = "~> 0.12"
+  backend "gcs" {
+    bucket = "terraform_cluster_state_singam"
+  }
 }
 
 # Local values assign a name to an expression, that can then be used multiple
