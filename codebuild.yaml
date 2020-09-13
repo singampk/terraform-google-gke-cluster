@@ -13,7 +13,7 @@ steps:
             "gcr.io/fabled-autonomy-268009/codebuild:latest",
             "."
         ]
-        
+
   #push image
   - id: "Push image"
     name: "gcr.io/cloud-builders/docker"
@@ -22,6 +22,15 @@ steps:
       - -c
       - |
         docker push gcr.io/fabled-autonomy-268009/codebuild:latest || exit 0
+
+  #Run terraform      
+  - id: "Run terraform init"      
+    name: "run terraform init"
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        terraform version
 
 images: 
     - gcr.io/fabled-autonomy-268009/codebuild:latest
